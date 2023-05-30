@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+</head>
+<body style="margin: 0">
+    <div style="position: fixed; width: 200px; height: 200px; background-color: aqua;"></div>
+    <div style="position: fixed; width: 200px; height: 20px; background-color: blue;"></div>
+    <div style="position: fixed; width: 200px; height: 100px; background-color: rgb(7, 255, 118);"></div>
+    <div style="position: fixed; width: 200px; height: 60px; background-color: rgb(255, 0, 51);"></div>
+    <script>
+        let mouse = { x: 0, y: 0 };
+        document.addEventListener('mousemove', (event) => {
+            mouse = { x: event.clientX, y: event.clientY };
+        });
+
+        const elements = document.getElementsByTagName("div");
+
+        let momentum = [];
+        let originalPositions = [];
+        for (let i = 0; i < elements.length; i++) {
+            const originalPosition = { x: Math.random() * 100 + 100, y: Math.random() * 100 + 100 };
+            momentum.push({ pos: { x: originalPosition.x, y: originalPosition.y }, speed: { x: 0, y: 0 } });
+            originalPositions.push(originalPosition);
+        }
+
+        const distanz = 200;
+
+        function distance(a, b) {
+            var aa = a.x - b.x;
+            var bb = a.y - b.y;
+            return Math.sqrt(aa * aa + bb * bb);
+        }
+
+        let step = 0;
+        function loop() {
+            for (let i = 0; i < elements.length; i++) {
+                if (distance(mouse, momentum[i].pos) < distanz) {
+                    momentum[i].speed.x += ((momentum[i].pos.x - mouse.x)) / 200;
+                    momentum[i].speed.y += ((momentum[i].pos.y - mouse.y)) / 200;
+                } else {
+                    momentum[i].speed.x += ((originalPositions[i].x - momentum[i].pos.x)) / 200;
+                    momentum[i].speed.y += ((originalPositions[i].y - momentum[i].pos.y)) / 200;
+                }
+                elements[i].style.transform = "translateX(" + (momentum[i].pos.x) + "px) translateY(" + (momentum[i].pos.y) + "px)";
+
+                momentum[i].pos.x += momentum[i].speed.x;
+                momentum[i].pos.y += momentum[i].speed.y;
+
+                momentum[i].speed.x *= 0.98;
+                momentum[i].speed.y *= 0.98;
+            }
+
+            step++;
+            requestAnimationFrame(loop);
+        }
+
+        loop();
+    </script>
+</body>
+</html>
