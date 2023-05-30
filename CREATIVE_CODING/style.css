@@ -1,0 +1,50 @@
+@font-face {
+	font-family: 'SuisseIntlMono-Regular';
+	src: url('font/SuisseIntlMono-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+
+    margin: 0;
+    background-color: black;
+
+}
+
+p {
+    font-family: 'SuisseIntlMono-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    text-decoration: none;
+
+    
+}
+
+.links {
+    font-family: 'SuisseIntlMono-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.main {
+  display:block;
+}
