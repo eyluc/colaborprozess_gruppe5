@@ -1,0 +1,158 @@
+@font-face {
+	font-family: 'SuisseIntlMono-Regular';
+	src: url('font/SuisseIntlMono-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+    background-color: black;
+}
+
+
+p {
+    font-family: 'SuisseIntlMono-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    word-spacing: -3px;
+    color: #eee3db;
+    margin: 0;
+    text-align:left;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+.spin {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  animation: spinAnimation 8s linear infinite;
+}
+
+@keyframes spinAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.link-div { 
+  border-bottom: #eee3db solid 2px;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+#noborder {
+
+  border-bottom: none;
+
+}
+
+.links {
+    font-family: 'SuisseIntlMono-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    margin: 0;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    text-decoration: none;
+    word-spacing: -15px;
+}
+
+.statement-title {
+  font-family: 'SuisseIntlMono-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: #eee3db;
+  margin: 0;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  text-decoration: none;
+  word-spacing: -15px;
+
+ 
+}
+
+.text-div {
+  margin-left: 100px;
+  width: 500px;
+}
+
+a {
+  text-decoration: none;
+  color: #eee3db;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #79732e;
+  transition: 0.2s;
+}
+
+.screenrec {
+  color: #f090a8;
+  transition: 0.2s;
+
+  font-size: 20px;
+}
+
+.screenrec:hover {
+  color: #ed6e32;
+  transition: 0.2s;
+
+}
+
+.main {
+  display:block;
+  background-color: #ed6e32;
+}
+
+.marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 50px;
+  overflow-x: hidden;
+  margin-bottom: 100px;
+
+  font-family: 'SuisseIntlMono-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #7a9db8;
+  word-spacing: -5px;
+
+  border-bottom: solid 2px #7a9db8;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.border-out {
+
+  left: 50%;
+  border: #eee3db solid 2px;
+  width: 700px;
+
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
