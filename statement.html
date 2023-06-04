@@ -34,17 +34,20 @@
         </p>
 
         <p class="statement">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+          Die Browser-Extension soll die konventionelle Browser-Nutzung auf eine subtile, spielerische Weise verändern. Die Idee wurde von Erweiterungen inspiriert wie «Abstract browsing» von Rafaël Rozendaal, welche die Elemente einer Webseite durch farbige Flächen ersetzt und die Seite in ein generatives Kunstwerk verwandelt oder «Site Bomb» von «Yui» mit welcher mensch per Mausklick Bomben auf der Seite verteilen kann, welche die Textabschnitte aufsprengen und weisse Löcher hinterlassen. Diese Erweiterungen bieten die Möglichkeit, spielerisch mit Webinhalten zu interagieren.<br> <br>
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+Die Idee von «GoAway» ist es, einzelne Wörter oder Elemente auf einer Webseite zu verdrängen. Dies können Texte oder auch andere Elemente wie Bilder beinhalten. Zum Beispiel könnte das Wort «Banane» auf der Website www.chiquita.com ein Triggerwort sein, welches vom Mauscursor von der Seite verdrängt wird.<br> <br>
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
+Entwicklungsprozess:
+Als erstes haben wir zusammen mit Hanna einen Text-Scrambler geschrieben und ausprobiert, wie wir die unterschiedlichen Elemente auf einer Webseite ansprechen können, um diese dann zu beeinflussen. 
+Dies haben wir mit der Funktion «.getElementsByTagName» (um das HTML-Objekt auszuwählen) und dann mit node.nodeName (hier zum Beispiel «H1» oder «p») programmiert. den einzelnen Elementen haben wir dann allen eine gemeinsame Klasse zugewiesen.
+Separat davon haben wir mit Chrigi Etter mithilfe von JavaScript programmiert, dass die Elemente durch den Cursor verdrängt werden. Indem wir die Position mit der Translate-Funktion verschieben und durch die Geschwindigkeit und Position des Cursors beeinflussen.<br> <br>
 
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   
+Herausforderungen:
+Die grössten Schwierigkeiten bereiteten uns das Zusammenfügen der beiden Code Teile. 
+Die erste Idee, um die Objekte zu verdrängen, war es, mit der JavaScript-Physics-Engine «Matter.js» die vielen Elemente realistisch verdrängen zu lassen. Matter.js hätte zudem die Möglichkeit geboten andere Physik-basierte Interaktionen zu erlauben, wie zum Beispiel dass die Webseite beim Laden in sich zusammenfällt.  Mit Hilfe von Christian Etter ist es uns gelungen, eine eigenständige Verdrängung der Boxen mit JavaScript zu programmieren. Die am Anfang benutzte Physics-Engine Matter.js wurde somit überflüssig. 
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   
 
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
         </p>
       </div>
 
